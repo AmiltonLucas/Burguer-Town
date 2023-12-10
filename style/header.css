@@ -1,0 +1,213 @@
+body {
+  background-color: #fafafa;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  margin: 0;
+  transition: background 0.2s linear;
+}
+
+header {
+  background-color: #333;
+  text-align: center;
+  padding: 1rem;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.boxNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff4;
+  animation: slideTopDown 1s;
+}
+
+.imageLogo {
+  width: 10rem;
+}
+
+.imageLogo img {
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  font-size: clamp(1.6rem, 2.5vw, 3.2rem);
+  white-space: nowrap;
+  text-shadow: 1px 1px 1px #0002;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+}
+
+nav a:hover {
+  background: #fff2;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: #fafafa;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+  }
+
+  header {
+    background-color: #333;
+    text-align: center;
+    padding: 1rem;
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+
+  .boxNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff4;
+    animation: slideTopDown 1s;
+  }
+
+  .imageLogo {
+    width: 12rem;
+  }
+
+  .imageLogo img {
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav a {
+    color: white;
+    font-size: clamp(2.8rem, 2.5vw, 5.4rem);
+    white-space: nowrap;
+    text-shadow: 1px 1px 1px #0002;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+  }
+
+  nav a:hover {
+    background: #fff2;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background-color: #fafafa;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+  }
+
+  header {
+    background-color: #333;
+    text-align: center;
+    padding: 1rem;
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+
+  .boxNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff4;
+    animation: slideTopDown 1s;
+  }
+
+  .imageLogo {
+    width: 14rem;
+  }
+
+  .imageLogo img {
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav a {
+    color: white;
+    font-size: clamp(2.4rem, 2.5vw, 4.6rem);
+    white-space: nowrap;
+    text-shadow: 1px 1px 1px #0002;
+    padding: 1rem;
+    border-radius: 0.8rem;
+  }
+
+  nav a:hover {
+    background: #fff2;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-color: #fafafa;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+  }
+
+  header {
+    background-color: #333;
+    text-align: center;
+    padding: 1rem;
+    font-family: "IBM Plex Sans", sans-serif;
+  }
+
+  .boxNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff4;
+    animation: slideTopDown 1s;
+  }
+
+  .imageLogo {
+    width: 16rem;
+  }
+
+  .imageLogo img {
+    width: 100%;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav a {
+    color: white;
+    font-size: clamp(3.2rem, 2.5vw, 5.6rem);
+    white-space: nowrap;
+    text-shadow: 1px 1px 1px #0002;
+    padding: 1rem;
+    border-radius: 0.8rem;
+  }
+
+  nav a:hover {
+    background: #fff2;
+  }
+}
