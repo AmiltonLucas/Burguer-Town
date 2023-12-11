@@ -162,3 +162,31 @@ function SpriteProduct() {
         break;
     }
 }
+
+function BatataProduct() {
+  // Obter o elemento de litragem e o valor selecionado
+  var tamanhoSelect = document.getElementById("tamanho");
+  var selectedtamanho = tamanhoSelect.value;
+
+  // Atualizar a imagem do produto com base na litragem selecionada
+  var productImage = document.getElementById("batata-image");
+  productImage.src =
+    "./images/Produtos/batata-" + selectedtamanho.toLowerCase() + ".png";
+
+  // Atualizar o preço com base na litragem selecionada
+  var productPrice = document.getElementById("product-price");
+  switch (selectedtamanho) {
+    case "pequeno":
+      productPrice.textContent = "Preço: R$10.00";
+      break;
+    case "medio":
+      productPrice.textContent = "Preço: R$16.00";
+      break;
+    case "grande":
+      productPrice.textContent = "Preço: R$22.00";
+      break;
+    default:
+      productPrice.textContent = "Preço: R$10.00";
+      break;
+  }
+}

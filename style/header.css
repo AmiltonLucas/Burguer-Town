@@ -1,5 +1,16 @@
+:root {
+  --Shallow-Sea: #9BB9BF;
+  --Light-Pure-Blue: #C1D4D9;
+  --Gould-Blue: #7BA1A6;
+  --Sablonando-Grey:  #455759;
+  --Hotot-Bunny:  #F0F2F2;
+  --white: #FFF;
+  --background: #E2E3E9;
+  --background-header: #333;
+}
+
 body {
-  background-color: #fafafa;
+  background: var(--background);
   align-items: center;
   justify-content: center;
 
@@ -9,7 +20,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background: var(--background-header);
   text-align: center;
   padding: 1rem;
   font-family: "IBM Plex Sans", sans-serif;
@@ -38,7 +49,7 @@ nav ul {
 }
 
 nav a {
-  color: white;
+  color: var(--white);
   font-size: clamp(1.6rem, 2.5vw, 3.2rem);
   white-space: nowrap;
   text-shadow: 1px 1px 1px #0002;
