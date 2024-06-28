@@ -36,6 +36,11 @@ h5 {
   color: #fff !important;
 }
 
+.navbar-nav {
+  align-items: center;
+  justify-content: center;
+}
+
 .nav-item {
   width: 100%;
 }
@@ -45,9 +50,9 @@ h5 {
 }
 
 .developer {
-  width: 100%;
-  font-size: 1.2rem;
-  text-align: center;
+  margin-top: auto;
+  text-align: center; /* Espaçamento opcional para o rodapé */
+  font-size: 1.2rem; /* Ajuste o tamanho da fonte conforme necessário */
 }
 
 .developer img {
@@ -69,12 +74,39 @@ nav a {
   border-radius: 0.8rem;
 }
 
+.carousel {
+  margin-top: 4rem;
+}
+
 @media (min-width: 768px) {
   body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+  }
+
+  nav,
+  p {
+    font-size: 2rem;
+  }
+
+  .offcanvas {
+    width: 50% !important;
+    max-width: 50% !important;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .developer {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    color: white;
+    font-size: clamp(1.2rem, 2.5vw, 2.4rem);
   }
 }
 
@@ -84,5 +116,24 @@ nav a {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+  }
+
+  nav,
+  p {
+    font-size: 2rem;
+  }
+
+  .offcanvas {
+    width: 40% !important;
+    max-width: 40% !important;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  nav a {
+    color: white;
+    font-size: clamp(1.4rem, 2.5vw, 2.8rem);
   }
 }
