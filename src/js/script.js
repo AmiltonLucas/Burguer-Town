@@ -26,34 +26,84 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-const cardContainer = document.querySelector('.cardContainer');
-const cards = document.querySelectorAll('.cardProducts');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-let currentIndex = 0;
+let cart = [];
+const cartButton = document.querySelector(".cart-button");
+const cartOverlay = document.getElementById("cartOverlay");
+const cartItemsContainer = document.getElementById("cartItems");
+const cartTotalElement = document.getElementById("cartTotal");
+const closeCartButton = document.querySelector(".close-cart");
+const closeCartXButton = document.querySelector(".close-cart-x");
 
-const updateView = () => {
-    const translateX = -currentIndex * 100;
-    cardContainer.style.transform = `translateX(${translateX}%)`;
-};
+function addToCart(product) {
+  const item = cart.find((cartItem) => cartItem.name === product.name);
+  if (item) {
+    item.quantity += 1;
+  } else {
+    cart.push({
+      name: product.name,
+      price: parseFloat(product.price),
+      quantity: 1,
+    });
+  }
+  updateCart();
+}
 
-nextBtn.addEventListener('click', () => {
-    if (currentIndex < cards.length - 1) {
-        currentIndex++;
-    } else {
-        currentIndex = 0;
+function updateCart() {
+  cartItemsContainer.innerHTML = "";
+  let total = 0;
+  cart.forEach((item) => {
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
+
+    const cartItem = document.createElement("div");
+    cartItem.className = "cart-item";
+    cartItem.innerHTML = `
+            <span>${item.name}</span>
+            <div class="quantity-buttons">
+                <button onclick="changeQuantity('${item.name}', -1)">-</button>
+                <span>${item.quantity}</span>
+                <button onclick="changeQuantity('${item.name}', 1)">+</button>
+            </div>
+            <span>R$ ${itemTotal.toFixed(2)}</span>
+        `;
+    cartItemsContainer.appendChild(cartItem);
+  });
+  cartTotalElement.textContent = total.toFixed(2);
+}
+
+function changeQuantity(name, amount) {
+  const item = cart.find((cartItem) => cartItem.name === name);
+  if (item) {
+    item.quantity += amount;
+    if (item.quantity <= 0) {
+      cart = cart.filter((cartItem) => cartItem.name !== name);
     }
-    updateView();
+    updateCart();
+  }
+}
+
+document.querySelectorAll(".product button").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    const productName = e.target.dataset.name;
+    const productPrice = e.target.dataset.price;
+    addToCart({ name: productName, price: productPrice });
+  });
 });
 
-prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-    } else {
-        currentIndex = cards.length - 1;
-    }
-    updateView();
+cartButton.addEventListener("click", () => {
+  cartOverlay.style.display = "flex";
 });
 
-// Inicializa a visão
-updateView();
+closeCartButton.addEventListener("click", () => {
+  cartOverlay.style.display = "none";
+});
+
+closeCartXButton.addEventListener("click", () => {
+  cartOverlay.style.display = "none";
+});
+
+cartOverlay.addEventListener("click", (e) => {
+  if (e.target === cartOverlay) {
+    cartOverlay.style.display = "none";
+  }
+});

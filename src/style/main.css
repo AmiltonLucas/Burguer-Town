@@ -40,28 +40,28 @@ body {
   display: none;
 }
 
-.cardProducts {
+.product {
   margin: 1rem 0 1rem 0;
   scroll-snap-align: center;
 }
 
-.cardProducts .imageBox {
+.product .imageBox {
   width: 100%;
 }
 
-.cardProducts .imageBox img {
+.product .imageBox img {
   width: 15rem;
   border-radius: 10px;
 }
 
-.cardProducts h3 {
+.product h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
   padding: 1rem 0 1rem 0;
 }
 
-.cardProducts button {
+.product button {
   padding: 0.5rem;
   border-radius: 20px;
   background: #a60a0a;
@@ -72,7 +72,7 @@ body {
   font-size: 1.2rem;
 }
 
-.cardProducts button:hover {
+.product button:hover {
   filter: brightness(1.5);
   transition: 0.5s;
 }
