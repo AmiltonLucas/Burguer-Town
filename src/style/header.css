@@ -24,6 +24,14 @@ p {
   font-style: normal;
 }
 
+.cart {
+  margin: 0rem 0rem 0rem 12rem;
+  padding: 0px 3px 0px 3px;
+  border-radius: 5px;
+  border: 1px #0003 solid;
+  text-align: center;
+}
+
 .offcanvas {
   background-color: var(--background-header) !important;
   color: #fff !important;

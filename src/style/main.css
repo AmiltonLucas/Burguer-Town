@@ -1,22 +1,39 @@
+body {
+  background: #f2efe4 !important;
+  color: #333 !important;
+}
+
 .menu {
-  background-color: #f8f8f8;
+  text-align: center;
+  align-items: center;
   padding: 2rem;
 }
 
-.menu h3 {
+.menu h1 {
+  font-size: 3.2rem;
   margin: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.menu h2 {
+  font-size: 2.4rem;
+  margin: 2rem 0 2rem 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .cardsProducts {
   margin-top: 3rem;
-  display: flex;
+  display: grid;
   align-items: start;
-  gap: 4.2rem;
+  gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
   overflow-x: auto;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
 }
 
 .cardsProducts::-webkit-scrollbar {
@@ -24,42 +41,40 @@
 }
 
 .cardProducts {
-  width: 22rem;
+  margin: 1rem 0 1rem 0;
   scroll-snap-align: center;
 }
 
 .cardProducts .imageBox {
-  width: 25rem;
-  border: 2px solid #333;
-  border-radius: 0.8rem 0.8rem 0 0;
-}
-
-.cardProducts img {
   width: 100%;
-  transition: scale 300ms;
 }
 
-.cardProducts img:hover {
-  scale: 1.05;
-  border-radius: 0.8rem;
-}
-
-.cardProducts .textBox {
-  text-align: center;
+.cardProducts .imageBox img {
+  width: 15rem;
+  border-radius: 10px;
 }
 
 .cardProducts h3 {
-  margin: 1.6rem 0 0.8rem;
-  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 1rem 0 1rem 0;
 }
 
 .cardProducts button {
-  font-size: 1.4rem;
-  margin-top: 0.2rem;
   padding: 0.5rem;
-  border: 2px solid #333;
-  border-radius: 0.8rem;
-  cursor: pointer;
+  border-radius: 20px;
+  background: #a60a0a;
+  color: #f8f8f8;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+.cardProducts button:hover {
+  filter: brightness(1.5);
+  transition: 0.5s;
 }
 
 .about {
@@ -71,93 +86,56 @@
 }
 
 @media (min-width: 768px) {
-  .hero {
-    color: white;
-    text-align: center;
-    padding: 2em;
-  }
-
-  .hero h2 {
-    font-size: 3.2rem;
-    text-shadow: 1px 1px 4px #333;
-  }
-
-  .hero p {
-    font-size: 2.4rem;
-    text-shadow: 1px 1px 4px #333;
-  }
-
   .menu {
-    background-color: #f8f8f8;
+    text-align: center;
+    align-items: center;
     padding: 2rem;
   }
 
   .menu h1 {
-    margin: 1rem;
-    font-size: 3.2rem;
+    font-size: 4.2rem;
+    margin: 1.2rem;
   }
 
   .menu h2 {
-    margin-top: 1rem;
     font-size: 2.8rem;
+    margin: 1.2rem;
   }
 
   .cardsProducts {
-    margin-top: 2rem;
-    display: flex;
-    align-items: start;
-    gap: 4.2rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-  }
-
-  .cardsProducts::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 1rem 0 2rem 0;
   }
 
   .cardProducts {
-    width: 30rem;
-    margin: 3rem;
-    scroll-snap-align: center;
+    margin: 1.2rem 0 1.2rem 0;
   }
 
   .cardProducts .imageBox {
-    width: 30rem;
-    border: 2px solid #333;
-    border-radius: 0.8rem 0.8rem 0 0;
-  }
-
-  .cardProducts img {
     width: 100%;
-    transition: scale 300ms;
   }
 
-  .cardProducts img:hover {
-    scale: 1.05;
-    border-radius: 0.8rem;
-  }
-
-  .cardProducts .textBox {
-    text-align: center;
-    scale: 1.05;
+  .cardProducts .imageBox img {
+    width: 20rem;
+    border-radius: 15px;
   }
 
   .cardProducts h3 {
-    margin: 1.6rem 0 1rem;
-    padding: 1rem 0 0;
-    font-size: 3rem;
+    padding: 1.2rem 0 1.2rem 0;
   }
 
   .cardProducts button {
-    font-size: 2rem;
-    margin: 0.5rem 0 0.5rem;
     padding: 0.5rem;
-    border: 2px solid #333;
-    border-radius: 1rem;
-    cursor: pointer;
+    border-radius: 20px;
+    background: #a60a0a;
+    color: #f8f8f8;
+    font-size: 1.4rem;
+  }
+
+  .cardProducts button:hover {
+    filter: brightness(1.5);
   }
 
   .about {
@@ -170,93 +148,56 @@
 }
 
 @media (min-width: 1024px) {
-  .hero {
-    color: white;
-    text-align: center;
-    padding: 2em;
-  }
-
-  .hero h2 {
-    font-size: 3.6rem;
-    text-shadow: 1px 1px 4px #333;
-  }
-
-  .hero p {
-    font-size: 2.4rem;
-    text-shadow: 1px 1px 4px #333;
-  }
-
   .menu {
-    background-color: #f8f8f8;
-    padding: 2rem;
+    text-align: center;
+    align-items: center;
+    padding: 2.2rem;
   }
 
   .menu h1 {
-    margin: 1rem;
-    font-size: 3.2rem;
+    font-size: 4.8rem;
+    margin: 1.4rem;
   }
 
   .menu h2 {
-    margin-top: 1rem;
-    font-size: 2.8rem;
+    font-size: 3.2rem;
+    margin: 1.4rem;
   }
 
   .cardsProducts {
-    margin-top: 3rem;
-    display: flex;
-    align-items: start;
-    gap: 5rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-    padding-left: 2.4rem;
-    padding-right: 2.4rem;
-  }
-
-  .cardsProducts::-webkit-scrollbar {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 2rem 0 4rem 0;
   }
 
   .cardProducts {
-    width: 30rem;
-    margin: 3rem;
-    scroll-snap-align: center;
+    margin: 1.4rem 0 1.4rem 0;
   }
 
   .cardProducts .imageBox {
-    width: 30rem;
-    border: 2px solid #333;
-    border-radius: 0.8rem 0.8rem 0 0;
-  }
-
-  .cardProducts img {
     width: 100%;
-    transition: scale 300ms;
   }
 
-  .cardProducts img:hover {
-    scale: 1.05;
-    border-radius: 0.8rem;
-  }
-
-  .cardProducts .textBox {
-    text-align: center;
-    scale: 1.07;
+  .cardProducts .imageBox img {
+    width: 20rem;
+    border-radius: 20px;
   }
 
   .cardProducts h3 {
-    margin: 1.6rem 0 1rem;
-    padding: 1rem 0 0;
-    font-size: 3.2rem;
+    padding: 1.2rem 0 1.2rem 0;
   }
 
   .cardProducts button {
-    font-size: 2.4rem;
-    margin: 0.8rem 0 0.8rem;
     padding: 0.5rem;
-    border: 2px solid #333;
-    border-radius: 1rem;
-    cursor: pointer;
+    border-radius: 20px;
+    background: #a60a0a;
+    color: #f8f8f8;
+    font-size: 1.6rem;
+  }
+
+  .cardProducts button:hover {
+    filter: brightness(1.5);
   }
 
   .about {
