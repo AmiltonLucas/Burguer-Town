@@ -255,3 +255,58 @@ function updateFanta() {
   button.setAttribute("data-name", productName);
   button.setAttribute("data-price", productPrice);
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const promoFamilia = document.getElementById("promo-familia");
+  const countdown1 = document.getElementById("countdown1");
+  const promoEspecial = document.getElementById("promo-especial");
+  const countdown2 = document.getElementById("countdown2");
+
+  function updateCountdown(targetDate, countdownElement, productElement) {
+      const now = new Date();
+      const timeDifference = targetDate - now;
+
+      if (timeDifference <= 0) {
+          productElement.classList.remove("hidden");
+          countdownElement.textContent = "";
+          enableAddToCart(productElement);
+      } else {
+          const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+          countdownElement.textContent = `Disponível em ${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+  }
+
+  function enableAddToCart(productElement) {
+      const addToCartButton = productElement.querySelector("button");
+      addToCartButton.addEventListener("click", function() {
+          const productName = addToCartButton.getAttribute("data-name");
+          const productPrice = parseFloat(addToCartButton.getAttribute("data-price"));
+
+          // Aqui você pode implementar a lógica para adicionar ao carrinho
+          console.log(`Adicionando ao carrinho: ${productName} por R$ ${productPrice.toFixed(2)}`);
+          // Exemplo: Adicionar ao carrinho pode ser implementado aqui
+
+          // Por exemplo, redirecionamento para uma página de carrinho ou adição a um carrinho virtual
+      });
+  }
+
+  const targetDate1 = new Date();
+  targetDate1.setMonth(6); // Julho (0 = Janeiro, 6 = Julho)
+  targetDate1.setDate(13);
+  targetDate1.setHours(19, 0, 0, 0);
+
+  const targetDate2 = new Date();
+  targetDate2.setMonth(6); // Julho (0 = Janeiro, 6 = Julho)
+  targetDate2.setDate(13);
+  targetDate2.setHours(19, 0, 0, 0);
+
+  setInterval(function() {
+      updateCountdown(targetDate1, countdown1, promoFamilia);
+      updateCountdown(targetDate2, countdown2, promoEspecial);
+  }, 1000);
+});
+

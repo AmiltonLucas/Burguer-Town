@@ -250,4 +250,8 @@ select {
   #refri button {
     margin-top: 2rem;
   }
+
+  option {
+    scale: 1.5;
+  }
 }
