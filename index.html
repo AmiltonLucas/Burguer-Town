@@ -279,10 +279,7 @@
               <div class="textBox">
                 <h3>Universitário</h3>
                 <p>R$ 39,90</p>
-                <button
-                  data-name="Combo Universitário"
-                  data-price="39.90"
-                >
+                <button data-name="Combo Universitário" data-price="39.90">
                   Adiconar ao carrinho
                 </button>
               </div>
@@ -377,59 +374,119 @@
           </div>
 
           <h2 id="refrigerante">Refrigerantes</h2>
-          <div class="cardsProducts">
+          <div class="cardsProducts" id="refri">
             <div class="product">
               <div class="imageBox">
-                <img src="src/images/products/coca-lata.png" alt="" />
+                <img
+                  src="src/images/products/coca-lata.png"
+                  alt="lata"
+                  id="litragem-image"
+                />
               </div>
 
               <div class="textBox">
                 <h3>Coca Cola</h3>
-                <p>R$ 5,00</p>
-                <button data-name="Coca Cola 350ml" data-price="5.00">
-                  Adiconar ao carrinho
+                <p id="product-price">R$ 5,00</p>
+                <label for="litragem"></label>
+                <select id="litragem" onchange="updateProduct()">
+                  <option value="lata">350ml</option>
+                  <option value="600">600ml</option>
+                  <option value="1l">1 Litro</option>
+                  <option value="2l">2 Litros</option>
+                </select>
+                <button
+                  id="add-to-cart"
+                  data-name="Coca Cola 350ml"
+                  data-price="5.00"
+                >
+                  Adicionar ao carrinho
                 </button>
               </div>
             </div>
 
             <div class="product">
               <div class="imageBox">
-                <img src="src/images/products/pepsi-lata.png" alt="" />
+                <img
+                  src="src/images/products/pepsi-lata.png"
+                  alt="lata"
+                  id="pepsi-image"
+                />
               </div>
 
               <div class="textBox">
                 <h3>Pepsi</h3>
-                <p>R$ 4,50</p>
-                <button data-name="Pepsi 350ml" data-price="4.50">
-                  Adiconar ao carrinho
+                <p id="pepsi-price">R$ 4,50</p>
+                <label for="pepsi-litragem"></label>
+                <select id="pepsi-litragem" onchange="updatePepsi()">
+                  <option value="lata">350ml</option>
+                  <option value="600">600ml</option>
+                  <option value="1l">1 Litro</option>
+                  <option value="2l">2 Litros</option>
+                </select>
+                <button
+                  id="add-to-cart-pepsi"
+                  data-name="Pepsi 350ml"
+                  data-price="5.00"
+                >
+                  Adicionar ao carrinho
                 </button>
               </div>
             </div>
 
             <div class="product">
               <div class="imageBox">
-                <img src="src/images/products/guarana-lata.png" alt="" />
+                <img
+                  src="src/images/products/guarana-lata.png"
+                  alt="lata"
+                  id="guarana-image"
+                />
               </div>
 
               <div class="textBox">
                 <h3>Guaraná</h3>
-                <p>R$ 5,00</p>
-                <button data-name="Guaraná 350ml" data-price="5.00">
-                  Adiconar ao carrinho
+                <p id="guarana-price">R$ 5,00</p>
+                <label for="guarana-litragem"></label>
+                <select id="guarana-litragem" onchange="updateGuarana()">
+                  <option value="lata">350ml</option>
+                  <option value="600">600ml</option>
+                  <option value="1l">1 Litro</option>
+                  <option value="2l">2 Litros</option>
+                </select>
+                <button
+                  id="add-to-cart-guarana"
+                  data-name="Guaraná 350ml"
+                  data-price="5.00"
+                >
+                  Adicionar ao carrinho
                 </button>
               </div>
             </div>
 
             <div class="product">
               <div class="imageBox">
-                <img src="src/images/products/fanta-lata.png" alt="" />
+                <img
+                  src="src/images/products/fanta-lata.png"
+                  alt="lata"
+                  id="fanta-image"
+                />
               </div>
 
               <div class="textBox">
                 <h3>Fanta Laranja</h3>
-                <p>R$ 5,00</p>
-                <button data-name="Fanta Laranja 350ml" data-price="5.00">
-                  Adiconar ao carrinho
+                <p id="fanta-price">R$ 5,00</p>
+                <label for="fanta-litragem"></label>
+                <select id="fanta-litragem" onchange="updateFanta()">
+                  <option value="lata">350ml</option>
+                  <option value="600">600ml</option>
+                  <option value="1l">1 Litro</option>
+                  <option value="2l">2 Litros</option>
+                </select>
+                <button
+                  id="add-to-cart-fanta"
+                  data-name="Fanta Laranja 350ml"
+                  data-price="5.00"
+                >
+                  Adicionar ao carrinho
                 </button>
               </div>
             </div>
@@ -507,7 +564,11 @@
 
               <div class="textBox">
                 <h3>Trio da fome</h3>
-                <p>1x hambuguer <br> 1x milkshake <br> 1x batata </p>
+                <p>
+                  1x hambuguer <br />
+                  1x milkshake <br />
+                  1x batata
+                </p>
                 <p>R$ 31,90</p>
                 <button data-name="Trio da fome" data-price="31.90">
                   Adiconar ao carrinho
@@ -522,7 +583,11 @@
 
               <div class="textBox">
                 <h3>Promo familía</h3>
-                <p>4x hambuguer <br> 1x Coca cola 2l <br> 1x batata </p>
+                <p>
+                  4x hambuguer <br />
+                  1x Coca cola 2l <br />
+                  1x batata
+                </p>
                 <p>R$ 89,90</p>
                 <button data-name="Promo familía" data-price="89.90">
                   Adiconar ao carrinho

@@ -107,3 +107,151 @@ cartOverlay.addEventListener("click", (e) => {
     cartOverlay.style.display = "none";
   }
 });
+
+function updateProduct() {
+  const litragem = document.getElementById("litragem").value;
+  const image = document.getElementById("litragem-image");
+  const price = document.getElementById("product-price");
+  const button = document.getElementById("add-to-cart");
+
+  let productName, productPrice, productImage;
+
+  switch (litragem) {
+    case "lata":
+      productName = "Coca Cola 350ml";
+      productPrice = "5.00";
+      productImage = "src/images/products/coca-lata.png";
+      break;
+    case "600":
+      productName = "Coca Cola 600ml";
+      productPrice = "7.00";
+      productImage = "src/images/products/coca-600.png";
+      break;
+    case "1l":
+      productName = "Coca Cola 1 Litro";
+      productPrice = "10.00";
+      productImage = "src/images/products/coca-1l.png";
+      break;
+    case "2l":
+      productName = "Coca Cola 2 Litros";
+      productPrice = "16.00";
+      productImage = "src/images/products/coca-2l.png";
+      break;
+  }
+
+  image.src = productImage;
+  price.innerText = `R$ ${productPrice}`;
+  button.setAttribute("data-name", productName);
+  button.setAttribute("data-price", productPrice);
+}
+
+function updatePepsi() {
+  const litragem = document.getElementById("pepsi-litragem").value;
+  const image = document.getElementById("pepsi-image");
+  const price = document.getElementById("pepsi-price");
+  const button = document.getElementById("add-to-cart-pepsi");
+
+  let productName, productPrice, productImage;
+
+  switch (litragem) {
+    case "lata":
+      productName = "Pepsi 350ml";
+      productPrice = "4.50";
+      productImage = "src/images/products/pepsi-lata.png";
+      break;
+    case "600":
+      productName = "Pepsi 600ml";
+      productPrice = "7.50";
+      productImage = "src/images/products/pepsi-600.png";
+      break;
+    case "1l":
+      productName = "Pepsi 1 Litro";
+      productPrice = "10.00";
+      productImage = "src/images/products/pepsi-1l.png";
+      break;
+    case "2l":
+      productName = "Pepsi 2 Litros";
+      productPrice = "16.00";
+      productImage = "src/images/products/pepsi-2l.png";
+      break;
+  }
+
+  image.src = productImage;
+  price.innerText = `R$ ${productPrice}`;
+  button.setAttribute("data-name", productName);
+  button.setAttribute("data-price", productPrice);
+}
+
+function updateGuarana() {
+  const litragem = document.getElementById("guarana-litragem").value;
+  const image = document.getElementById("guarana-image");
+  const price = document.getElementById("guarana-price");
+  const button = document.getElementById("add-to-cart-guarana");
+
+  let productName, productPrice, productImage;
+
+  switch (litragem) {
+    case "lata":
+      productName = "Guaraná 350ml";
+      productPrice = "5.00";
+      productImage = "src/images/products/guarana-lata.png";
+      break;
+    case "600":
+      productName = "Guaraná 600ml";
+      productPrice = "7.00";
+      productImage = "src/images/products/guarana-600.png";
+      break;
+    case "1l":
+      productName = "Guaraná 1 Litro";
+      productPrice = "10.00";
+      productImage = "src/images/products/guarana-1l.png";
+      break;
+    case "2l":
+      productName = "Guaraná 2 Litros";
+      productPrice = "16.00";
+      productImage = "src/images/products/guarana-2l.png";
+      break;
+  }
+
+  image.src = productImage;
+  price.innerText = `R$ ${productPrice}`;
+  button.setAttribute("data-name", productName);
+  button.setAttribute("data-price", productPrice);
+}
+
+function updateFanta() {
+  const litragem = document.getElementById("fanta-litragem").value;
+  const image = document.getElementById("fanta-image");
+  const price = document.getElementById("fanta-price");
+  const button = document.getElementById("add-to-cart-fanta");
+
+  let productName, productPrice, productImage;
+
+  switch (litragem) {
+    case "lata":
+      productName = "Fanta Laranja 350ml";
+      productPrice = "5.00";
+      productImage = "src/images/products/fanta-lata.png";
+      break;
+    case "600":
+      productName = "Fanta Laranja 600ml";
+      productPrice = "7.00";
+      productImage = "src/images/products/fanta-600.png";
+      break;
+    case "1l":
+      productName = "Fanta Laranja 1 Litro";
+      productPrice = "10.00";
+      productImage = "src/images/products/fanta-1l.png";
+      break;
+    case "2l":
+      productName = "Fanta Laranja 2 Litros";
+      productPrice = "16.00";
+      productImage = "src/images/products/fanta-2l.png";
+      break;
+  }
+
+  image.src = productImage;
+  price.innerText = `R$ ${productPrice}`;
+  button.setAttribute("data-name", productName);
+  button.setAttribute("data-price", productPrice);
+}
